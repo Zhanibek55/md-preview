@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>MdPreviewClickTest</AssemblyName>
+    <RootNamespace>MdPreview.ClickTest</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
+    <Reference Include="MdPreview">
+      <HintPath>..\..\src\MdPreview\bin\Release\MdPreview.dll</HintPath>
+    </Reference>
+    <Reference Include="Markdig">
+      <HintPath>..\..\src\MdPreview\bin\Release\Markdig.dll</HintPath>
+    </Reference>
+    <!-- PreviewApi.AssetsDir resolves next to MdPreview.dll, so bring its assets along. -->
+    <None Include="..\..\src\MdPreview\bin\Release\assets\**\*" Link="assets\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

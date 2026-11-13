@@ -1,0 +1,5 @@
+bin/
+obj/
+product/tests/out/
+# Downloaded by product/tools/fetch-vendor.ps1 (pinned versions), ~6 MB
+product/src/MdPreview/assets/vendor/

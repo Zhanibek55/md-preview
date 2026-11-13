@@ -3,3 +3,6 @@ obj/
 product/tests/out/
 # Downloaded by product/tools/fetch-vendor.ps1 (pinned versions), ~6 MB
 product/src/MdPreview/assets/vendor/
+# Build-package.ps1 output (staging tree + the distributable zip)
+product/package/staging/
+product/package/out/

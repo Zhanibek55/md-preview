@@ -24,6 +24,26 @@ dotnet build tools/Warmup/Warmup.csproj -c Release   # optional: enables the ins
 Extensions: `.md .markdown .mdown .mkd .mkdn`. Pass `-SkipWarmup` to `install.ps1` to skip the
 cache warm-up (the first diagram is then slow once).
 
+### Portable package for another PC (no admin, no dev tools)
+
+`package/build-package.ps1` produces a self-contained zip you copy to another machine — no .NET SDK,
+no Node, no administrator rights on the target.
+
+```powershell
+cd projects/md-preview/product
+./package/build-package.ps1        # -> package/out/MdPreview-<version>.zip  (~4.4 MB)
+```
+
+On the target PC: unzip anywhere, double-click **Install.cmd** (a `.cmd` wrapper so the PowerShell
+execution policy is not in the way), then press Alt+P in Explorer and select a `.md` file.
+`Uninstall.cmd` removes it. The package carries the prebuilt binaries, the bundled libraries, the
+warm-up tool, and (best effort) the per-user WebView2 Runtime installer; the only target requirement
+is Windows 10 (1903+) / 11, where .NET Framework 4.8 is already present.
+
+Caveat: a work PC whose **Group Policy** forces a PowerShell execution policy can block even the
+`-ExecutionPolicy Bypass` wrapper. If `Install.cmd` is refused there, a batch + `.reg` installer (no
+PowerShell) or a signed single-exe (Inno Setup, per-user) is the fallback — not built yet.
+
 ### Why not Rust / other libraries
 
 The slow part was never the markdown parser (Markdig renders the PRD in 2.7 ms) or .NET — it was

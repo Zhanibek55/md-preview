@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0.0",
+    "description": "Rich Markdown preview (Mermaid diagrams, math, highlighted code, heading outline, Ctrl+F) in the Windows Explorer preview pane. Per-user, no admin, fully offline.",
+    "homepage": "https://github.com/Zhanibek55/md-preview",
+    "license": "MIT",
+    "url": "https://github.com/Zhanibek55/md-preview/releases/download/v0.1.0/MdPreview-0.1.0.0.zip",
+    "hash": "b1fbe6fb881f73749487bc3010346f990e32d736eaf3cdf13fc310aced8f0a8c",
+    "extract_dir": "MdPreview",
+    "post_install": [
+        "Write-Host 'Registering the Markdown preview handler (per-user, no admin)...'",
+        "& \"$dir\\install.ps1\""
+    ],
+    "pre_uninstall": [
+        "& \"$dir\\uninstall.ps1\""
+    ],
+    "notes": [
+        "In Explorer press Alt+P to show the preview pane, then select a .md file.",
+        "The first preview seeds a cache (~15 s, off-screen); after that it is fast.",
+        "Remote images are off by default. To toggle, run set-remote-images.ps1 -On (or -Off) from the app folder.",
+        "Requires the Microsoft Edge WebView2 Runtime; it ships with Windows 11 and most Windows 10, and is installed per-user automatically if missing."
+    ]
+}

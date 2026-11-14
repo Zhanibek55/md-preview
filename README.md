@@ -32,6 +32,13 @@ the preview **never touches the internet**.
 irm https://raw.githubusercontent.com/Zhanibek55/md-preview/main/install-online.ps1 | iex
 ```
 
+**Via [Scoop](https://scoop.sh)** (per‑user package manager):
+
+```powershell
+scoop bucket add md-preview https://github.com/Zhanibek55/md-preview
+scoop install md-preview
+```
+
 **Or manually:**
 
 1. Download the latest **`MdPreview-<version>.zip`** from the [Releases](../../releases) page.

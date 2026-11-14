@@ -79,4 +79,5 @@ Mermaid (MIT), KaTeX (MIT) and highlight.js (BSD‑3); see [product/LICENSES.md]
 
 ## Support
 
-MdPreview is free. If it saves you time, you can support its development: **<donate link — see release checklist>**.
+MdPreview is free and open‑source. If it saves you time, a ⭐ on the repo is appreciated — and issues and
+pull requests are welcome.

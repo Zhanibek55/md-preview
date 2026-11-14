@@ -1,5 +1,9 @@
 # Third-party components
 
+MdPreview itself is under the MIT License (see ../LICENSE). It bundles the components below under
+their own licenses. The Microsoft Edge WebView2 Runtime is a Microsoft component and is not part of
+this repository.
+
 | Component | Version | License | Where |
 |---|---|---|---|
 | Markdig | 1.5.1 | BSD-2-Clause | NuGet, `Markdig.dll` |

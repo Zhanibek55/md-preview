@@ -26,6 +26,14 @@ the preview **never touches the internet**.
 
 ## Install (no admin)
 
+**Fastest — one line in PowerShell.** Downloads the latest release and installs it for your user only (no admin). Inspect the [script](install-online.ps1) first if you like:
+
+```powershell
+irm https://raw.githubusercontent.com/Zhanibek55/md-preview/main/install-online.ps1 | iex
+```
+
+**Or manually:**
+
 1. Download the latest **`MdPreview-<version>.zip`** from the [Releases](../../releases) page.
 2. Unzip it anywhere and double‑click **`Install.cmd`**.
 3. In Explorer press **Alt+P** and select a `.md` file.
@@ -80,4 +88,4 @@ Mermaid (MIT), KaTeX (MIT) and highlight.js (BSD‑3); see [product/LICENSES.md]
 ## Support
 
 MdPreview is free and open‑source. If it saves you time, a ⭐ on the repo is appreciated — and issues and
-pull requests are welcome.
+pull requests are welcome. You can also download it (and leave an optional tip) on **[Payhip](https://payhip.com/b/yNw8e)** — pay‑what‑you‑want, $0+.
